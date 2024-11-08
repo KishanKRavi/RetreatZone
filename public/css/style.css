@@ -85,7 +85,7 @@ body {
     border-radius: 1rem !important;
     width: 100% !important;
     object-fit: cover !important;
-    height: 15rem !important;
+    height: 50vh !important;
     border-radius: 10px !important;
     margin-bottom: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -158,7 +158,7 @@ body {
 
 /* show page */
 .show-img {
-    height: 35vh;
+    height: 70vh !important;
 }
 
 .btn1 {
