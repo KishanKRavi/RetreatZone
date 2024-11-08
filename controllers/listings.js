@@ -68,7 +68,7 @@ module.exports.createListing = (async (req, res, next) => {
     newListing.owner = req.user._id;
     newListing.image = { url, filename };    
     await newListing.save();
-    req.flash("success", "Listing created successfully!");
+    req.flash("success", "Successfully Created ,scroll to see !!");
     res.redirect("/listings");
 });
 
@@ -97,7 +97,7 @@ module.exports.updateListing = (async (req, res) => {
         await listing.save();    
     }
 
-    req.flash("success", "Listing Updated!");
+    req.flash("success", "Update was Successfull !!");
     res.redirect(`/listings/${id}`);
 });
 
@@ -105,6 +105,6 @@ module.exports.destroyListing = async (req, res) => {
     let { id } = req.params;
     let deletedListing = await Listing.findByIdAndDelete(id);
     console.log(deletedListing);
-    req.flash("success", "Listing deleted");
+    req.flash("success", "Successfully deleted !");
     res.redirect("/listings");
 };

@@ -19,6 +19,7 @@ body {
 .navbar {
     /* height: 5rem; */
     background-color: white;
+    font-size: small;
     
 }
 
@@ -129,15 +130,19 @@ body {
     border: none !important;
     color: white !important;
     border-radius: 10px;
-    margin-right: 5px;
+    margin: 5px;
+    width: fit-content;
+    padding: 0 5px 0 5px !important;
+    height: 30px !important;
+    align-content: center;
     background-color: #fe424d !important;
 }
 
 #all2 {
-    opacity: 2;
+    opacity: 1;
     margin:auto;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .editform {
@@ -159,9 +164,9 @@ body {
     padding: auto !important;
     margin: auto !important;
 }
-.d-flex{
+/* .d-flex{
     margin-left: -8rem !important;
-}
+} */
 
 .navSearch:hover{
     background-color: #fe424d !important;
@@ -190,10 +195,11 @@ body {
 #filters {
     display: flex;
     flex-wrap: nowrap;
-    
+   
   }
 
   .filter {
+   
     text-align: center;
     font-size: 10px;
     margin: auto;
@@ -218,8 +224,8 @@ body {
     border: 1px solid black !important;
     border-radius:  1rem;
     height: 3rem;
-    padding: 0 1.5rem 0 1.2rem;
-    margin-left: 82%;
+    width: fit-content;
+    margin-left: 70%;
     align-items: center;
     display: flex;
   }
@@ -235,16 +241,16 @@ body {
 }
 
 .reviewCard{
-    margin: 1rem;
-    padding: 1rem;
-    height: 12rem !important;
-    width: 25rem !important;
+    margin: 5px;
+    padding: 5px;
+    height: fit-content;
+    width: 15rem;
 }
 
 .reviewBox{
 
     height: auto;
-    width: 80vw;
+    width: 50vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
