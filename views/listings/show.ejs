@@ -9,9 +9,9 @@
       <img src="<%= listing.image.url %>" class="card-img-top show-img"  alt="listing_image">
       <br>
         <div class="card-body">
-          <p class="card-text"> Owned by <i> <%= listing.owner.username%></i> </p>
+          <p class="card-text"> Posted by <i> <%= listing.owner.username%></i> </p>
           <p class="card-text"> "<%= listing.description %>"</p>
-          On price &#8377; <%= listing.price.toLocaleString() %>/day <br> <br>
+          Available @  &#8377; <%= listing.price.toLocaleString() %>/day <br> <br>
           <%= listing.location %>,
           <%= listing.country %><br>
         </div>
@@ -31,11 +31,11 @@
    </div>
   </div>
 </div>
-
+<hr>
 
   <div class="col-6 offset-3">
       <% if(currUser) { %>
-        <hr>
+        
       <h4>Leave a Review</h4>
 
       <form action="/listings/<%= listing.id %>/reviews" method="POST" novalidate class="needs-validation">
