@@ -89,7 +89,9 @@ app.use((req, res, next) => {
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
-
+app.get("/",(req,res)=>{
+  res.redirect("/listings");
+})
 app.all("*", (req, res, next) => {
   next(new ExpressError("Page not found!!", 404));
 }); 
