@@ -1,0 +1,22 @@
+<% if(success && success.length) {  %>
+    <div id="alert-message" class="alert alert-success show col-6 offset-3" role="alert"> 
+        <%= success %>
+    </div>
+<% }  %>
+
+<% if(error && error.length) {  %>
+    <div id="alert-message" class="alert alert-danger show col-6 offset-3" role="alert"> 
+        <%= error %>
+    </div>
+<% }  %>
+
+
+<script>
+    let msg = document.getElementById("alert-message");
+if (msg) { // Check if msg exists
+    setTimeout(() => {
+        msg.remove();
+    }, 2500);
+}
+</script>
+

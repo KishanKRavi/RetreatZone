@@ -1,51 +1,38 @@
-// const mongoose = require("mongoose");
-// const listing = require("../models/listing.js");
-// const newData = require("./data.js");
-
-
-// main().then(res=>{
-//     console.log("connection of database established");
-// })
-// .catch(err=>{
-//     console.log(err);
-// })
-
-// async function main() {
-//     await mongoose.connect("mongodb://127.0.0.1:27017/wanderlust");
-// }
-
-// const init = async()=>{
-//     await listing.deleteMany({});
-//     await listing.insertMany(newData.data);
-//     console.log("data newly added to DB");
-// }
-
-// init();
-
-
+require("dotenv").config({ path: "../.env" });
+console.log("DB_URL:", process.env.DB_URL);  // Check if DB_URL is loaded
 
 const mongoose = require("mongoose");
 const initData = require("./data.js");
 const Listing = require("../models/listing.js");
+const review = require("../models/review.js");
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+const dbUrl = process.env.DB_URL;
 
-main()
-  .then(() => {
-    console.log("connected to DB");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+if (!dbUrl) {
+  console.error("DB_URL is undefined. Check your .env file.");
+  process.exit(1);
+}
 
 async function main() {
-  await mongoose.connect(MONGO_URL);
+  try {
+    await mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+    console.log("Connected to DB");
+    await initDB();
+  } catch (err) {
+    console.error("Connection error:", err);
+  }
 }
 
 const initDB = async () => {
-  await Listing.deleteMany({});
-  await Listing.insertMany(initData.data);
-  console.log("data was initialized");
+  try {
+    
+    await Listing.deleteMany({});
+    initData.data =  initData.data.map((obj)=>({...obj,owner:"672120c597d77d30a566ad03"}));
+    await Listing.insertMany(initData.data);
+    console.log("Data was initialized");
+  } catch (err) {
+    console.error("Error initializing data:", err);
+  }
 };
 
-initDB();
+main();

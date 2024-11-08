@@ -1,4 +1,5 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+
+
 (() => {
     'use strict'
   
@@ -17,3 +18,29 @@
       }, false)
     })
   })()
+
+   // Select all dropdown items
+   const dropdownItems = document.querySelectorAll('.dropdown-item');
+   const dropdownButton = document.getElementById('dropdownMenuButton');
+
+   // Add click event listener to each item
+   dropdownItems.forEach(item => {
+       item.addEventListener('click', function() {
+           // Set the button text to the selected item's text
+           dropdownButton.textContent = this.textContent;
+       });
+   });
+
+   let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+   taxSwitch.addEventListener("click", () => {
+     let taxInfo = document.getElementsByClassName("tax-info");
+ 
+     for ( info of taxInfo) {
+ 
+       if(info.style.display != "inline") {
+         info.style.display = "inline";
+       } else {
+         info.style.display = "none";
+       }     
+     }
+   });

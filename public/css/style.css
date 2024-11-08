@@ -1,158 +1,257 @@
 
-
-/* // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 200 to 800 */
-
 body {
-    font-family: "Plus Jakarta Sans", system-ui !important;
-    display: flex;
-    flex-direction:column;
-    min-height: 100vh ;
+    font-family: "Comfortaa", sans-serif !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.headings{
+  font-family: "Bad Script", cursive !important;
+  font-optical-sizing: auto;
+  font-weight:700 !important;
+  font-style: normal;
 }
 
-.container{
+.container {
     flex: 1;
 }
-.h3{
-    margin-left: 1rem;
-}
 
-.navbar{
-    height: 4rem;
+/* Navbar */
+.navbar {
+    /* height: 5rem; */
     background-color: white;
+    
 }
-.fa-compass{
-    color: #ff0000;
+
+.fa-compass {
+    color: #fe424d;
     font-size: 2rem;
-}
-.nav-link{
-    color: #221c1c !important;
-}
-.navbar-collapse{
-    font-weight: 500 ;
-    color: #221c1c;
+
 }
 
-.navbar-toggler:active{
-    height: 300px !important;
+.nav-link {
+    /* !important must override other style and apply it  */
+    color: #222222 !important;  
 }
 
-.f-info-links a{
+/* Footer */
+.f-info-links a {
     text-decoration: none;
-    color: #222222;
+}
+.f-info-links a:hover {
+    text-decoration: underline;
 }
 
-.f-info-links a:hover{
-    text-decoration: underline black;
-
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+    width: 100%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.f-info{
-    height: 8rem;
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info {
+    text-align: center;
+    height: 7rem;
     background-color: #ebebeb;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    text-align: center; 
-    align-items: center;
+    align-items: space-evenly;
 }
 
-.f-info-socials i{
-    padding: 0.4rem;
-    font-size: 1.3rem;
-}
-.f-info-links, .f-info-socials{
-    width: 100%;
-}
 
-/* cards */
-.card{
-    
+/* Cards */
+.listing-card {
     border: none !important;
-    margin: 10px!important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    height: 15rem !important;
+    border-radius: 10px !important;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text {
+    font-weight: 400 !important;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+.card-img-top:hover {
+    box-shadow: 10px 10px 10px gray;
+    
+    transform: scale(1.05                                                                                                                                                   );
+}
+
+/* new page */
+.btn {
+    background-color:#fe424d  ;
+    border: none !important;
+}
+
+/* add new page form*/
+#all {
+    background-color:#b6b6b61d;
+    margin:auto;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.newform {
+    padding: 20px; 
+}
+
+/* Edit page form */
+.editbtn {
+    border: none !important;
+    color: white;
+}
+
+.btn-delete {
+    border: none !important;
+    color: white !important;
+    border-radius: 10px;
+    margin-right: 5px;
+    background-color: #fe424d !important;
+}
+
+#all2 {
+    opacity: 2;
+    margin:auto;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.editform {
+    padding: 20px; 
+}
+
+/* show page */
+.show-img {
+    height: 35vh;
+}
+
+.btn1 {
+    display: flex;
+}
+
+.navSearch{
+    border-radius: 25px !important;
+    border: 1px solid rgba(162, 162, 162, 0.364) !important;
+    padding: auto !important;
+    margin: auto !important;
+}
+.d-flex{
+    margin-left: -8rem !important;
+}
+
+.navSearch:hover{
+    background-color: #fe424d !important;
+    
+}
+.navSearchBar{
+
+    width: 20rem !important;
+    border-radius: 25px !important;
+    font-size: small !important;
+}
+
+/* for title RetreatZone */
+.style{
+    color: #fe424d !important;
+  }
+
+.hover:hover{
+    background-color: #222222 !important;
+    color: white !important;
+}
+.hovertitle:hover{
+    color:black !important;
+}
+
+#filters {
+    display: flex;
+    flex-wrap: nowrap;
+    
+  }
+
+  .filter {
+    text-align: center;
+    font-size: 10px;
+    margin: auto;
+    padding: 10px;
+    opacity: 0.7;
+  }
+  .filter i {
+    font-size: 1.5rem;
+  }
+
+  .filter:hover {
+    opacity: 1;
+    cursor: pointer;
+    color:#fe424d;
+  }
+  
+  .tax-info {
+    display: none;
+  }
+
+  .tax-switch {
+    border: 1px solid black !important;
+    border-radius:  1rem;
+    height: 3rem;
+    padding: 0 1.5rem 0 1.2rem;
+    margin-left: 82%;
+    align-items: center;
+    display: flex;
+  }
+.f-info{
+    position:relative;
+    bottom: 0px !important;
+    width: 100vw;
+}
+
+.flexbtn{
+    display: flex;
+    justify-content:space-between;
+}
+
+.reviewCard{
+    margin: 1rem;
+    padding: 1rem;
+    height: 12rem !important;
+    width: 25rem !important;
+}
+
+.reviewBox{
+
+    height: auto;
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items:; */
    
 }
 
-.card-img-top{
-    border-radius: 0.8rem !important;
-    width:100% !important;
-    object-fit: cover !important;
-    height: 18rem;
-  
-
-}
-.card-body{
-    padding: 1rem !important;
-    
-}
-.card-text{
-    font-weight: 500;
-    font-size: 0.85rem;
-}
-
-.row{
-    justify-content:space-around;
-}
-
-.listing-link{
-    text-decoration: none;
-    color:#222222;
-}
-
-/* card overlay */
-/* .card-img-overlay{
-    opacity: 0;
-    transition: 0.2s ease-in-out;
-    overflow: hidden;
-}*  */
-
-/*.card-img-overlay:hover{
-    opacity: 0.2;
-    background-color: white;
-} */
-
-.card-img-top{
-    overflow: hidden;
-}
-
-  .zoom-image {
-    
-    transition: transform 0.2s ease; /* Smooth zoom effect */
-  }
-  
-  .card:hover .zoom-image {
-    transform: scale(1.05); 
-    box-shadow: 5px 5px 7px gray;
-}
-  
-/* 
-.zoom-image:hover{
-  box-shadow:20px 25px gray;
-  } */
-
-/* create new list body */
-.newlist-body form{
-    padding: 2rem !important;
-}
-
-
-.btn-add{
-    background-color: #ff0000 !important;
-    border: none !important;
-}
-
-.show-list{
-    font-family: "Plus Jakarta Sans", system-ui !important;
-}
-
-.show-card{
-    font-weight: 600 !important;
-    font-size: large !important;
-}
-
-.card-of-show{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#map{
+    border-radius: 10px;
 }
